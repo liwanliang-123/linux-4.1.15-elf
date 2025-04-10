@@ -1,0 +1,110 @@
+#ifndef ICM_REG_H
+#define ICM_REG_H
+
+/* Sensor ID */
+#define ICM42670_ID			0x67
+#define ICM20607607_ID			0x05
+#define ICM20607608G_ID			0XAF
+#define ICM20607608D_ID			0XAE
+
+/* Sensor ID register */
+#define ICM_REG_WHO_AM_I		0x75
+
+/*ICM20607607 Register
+ *The reset value is 0x00 for all registers other
+ *than the registers below, also the self-test registers
+ *contain pre-programmed values and will not be 0x00
+ *after reset.
+ *Register 26(0x80) CONFIG
+ *Register 117(0x05) WHO_AM_I
+ *Register 107(0x41) Power Management 1
+ */
+
+#define	ICM20607_SMPLRT_DIV		0x19
+#define	ICM20607_CONFIG			0x1A
+#define	ICM20607_GYRO_CONFIG		0x1B
+#define	ICM20607_ACCEL_CONFIG		0x1C
+#define	ICM20607_ACCEL_CONFIG2		0x1D
+#define	ICM20607_LP_MODE_CFG		0x1E
+#define	ICM20607_ACCEL_WOM_THR		0x1F
+#define	ICM20607_FIFO_EN		0x23
+#define	ICM20607_FSYNC_INT		0x36
+#define	ICM20607_INT_PIN_CFG		0x37
+#define	ICM20607_INT_ENABLE		0x38
+#define	ICM20607_INT_STATUS		0x3A
+
+/* Accel out */
+#define	ICM20607_ACCEL_XOUT_H		0x3B
+#define	ICM20607_ACCEL_XOUT_L		0x3C
+#define	ICM20607_ACCEL_YOUT_H		0x3D
+#define	ICM20607_ACCEL_YOUT_L		0x3E
+#define	ICM20607_ACCEL_ZOUT_H		0x3F
+#define	ICM20607_ACCEL_ZOUT_L		0x40
+
+/* Temp out */
+#define	ICM20607_TEMP_OUT_H		0x41
+#define	ICM20607_TEMP_OUT_L		0x42
+
+/* Gyro out */
+#define	ICM20607_GYRO_XOUT_H		0x43
+#define	ICM20607_GYRO_XOUT_L		0x44
+#define	ICM20607_GYRO_YOUT_H		0x45
+#define	ICM20607_GYRO_YOUT_L		0x46
+#define	ICM20607_GYRO_ZOUT_H		0x47
+#define	ICM20607_GYRO_ZOUT_L		0x48
+
+/* self-test output */
+#define	ICM20607_SELF_TEST_X_GYRO	0x50
+#define	ICM20607_SELF_TEST_Y_GYRO	0x51
+#define	ICM20607_SELF_TEST_Z_GYRO	0x52
+#define	ICM20607_SELF_TEST_X_ACCEL	0x0D
+#define	ICM20607_SELF_TEST_Y_ACCEL	0x0E
+#define	ICM20607_SELF_TEST_Z_ACCEL	0x0F
+
+#define	ICM20607_SIGNAL_PATH_RESET	0x68
+#define	ICM20607_ACCEL_INTEL_CTRL	0x69
+#define	ICM20607_USER_CTRL		0x6A
+#define	ICM20607_PWR_MGMT_1		0x6B
+#define	ICM20607_PWR_MGMT_2		0x6C
+#define	ICM20607_FIFO_COUNTH		0x72
+#define	ICM20607_FIFO_COUNTL		0x73
+#define	ICM20607_FIFO_R_W		0x74
+#define	ICM20607_WHO_AM_I		0x75
+
+/* ACCEL_OFFSET */
+#define	ICM20607_XA_OFFSET_H		0x77
+#define	ICM20607_XA_OFFSET_L		0x78
+#define	ICM20607_YA_OFFSET_H		0x7A
+#define	ICM20607_YA_OFFSET_L		0x7B
+#define	ICM20607_ZA_OFFSET_H		0x7D
+#define	ICM20607_ZA_OFFSET_L		0x7E
+
+/* ICM42670 Register */
+
+/* Temp out */
+#define ICM42670_TEMP_DATA_H		0x09
+#define ICM42670_TEMP_DATA_L		0x0A
+
+/* Accel out */
+#define ICM42670_ACCEL_DATA_X_H		0x0B
+#define ICM42670_ACCEL_DATA_X_L		0x0C
+#define ICM42670_ACCEL_DATA_Y_H		0x0D
+#define ICM42670_ACCEL_DATA_Y_L		0x0E
+#define ICM42670_ACCEL_DATA_Z_H		0x0F
+#define ICM42670_ACCEL_DATA_Z_L		0x10
+
+/* Gyro out */
+#define ICM42670_GYRO_DATA_X_H		0x11
+#define ICM42670_GYRO_DATA_X_L		0x12
+#define ICM42670_GYRO_DATA_Y_H		0x13
+#define ICM42670_GYRO_DATA_Y_L		0x14
+#define ICM42670_GYRO_DATA_Z_H		0x15
+#define ICM42670_GYRO_DATA_Z_L		0x16
+
+#define ICM42670_PWR_MGMT0		0x1F
+
+#define ICM42670_GYRO_CONFIG0		0x20
+#define ICM42670_ACCEL_CONFIG0		0x21
+#define ICM42670_TEMP_CONFIG		0x22
+
+#endif

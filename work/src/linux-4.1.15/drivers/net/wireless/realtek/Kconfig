@@ -1,0 +1,29 @@
+menuconfig REALTEK_WIFI
+     tristate "Realtek wifi"
+
+if REALTEK_WIFI
+
+
+choice
+     prompt "select wifi type"
+     default RTL8189ES
+
+config RTL8189ES
+     depends on REALTEK_WIFI
+     tristate "rtl8189es sdio wifi"
+
+
+config RTL8188EUS
+     depends on REALTEK_WIFI
+     tristate "rtl8188eus usb wifi"
+
+config RTL8723BU
+     depends on REALTEK_WIFI
+     tristate "rtl8723bu usb wifi"
+
+config RTL8723DU
+     depends on REALTEK_WIFI
+     tristate "rtl8723du usb wifi"
+ endchoice
+ endif
+

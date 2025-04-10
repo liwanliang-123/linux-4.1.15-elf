@@ -1,0 +1,335 @@
+commit f0963d1a99a6671fff6ef852a8c0e02a15bc65c2
+Author: lnn <l13223144576@163.com>
+Date:   Fri Sep 22 15:38:26 2023 +0800
+
+    ov5640 white baalance
+
+commit 345eceb1191cc94c617a28c4e6a105d3cd0842de
+Author: elf_li <elf_li@exmple.com>
+Date:   Tue Sep 12 20:24:33 2023 +0800
+
+    adaptive panel 1024x600
+
+commit e9125e24b21a65d8ee04820665b3c66ed673cbcb
+Author: elf_li <elf_li@exmple.com>
+Date:   Mon Sep 11 16:34:44 2023 +0800
+
+    adaptive ov5640 driver module; del ov9650
+
+commit f56fd1b442c5bc1826ef4bfbaaf77447f2303437
+Author: elf_li <elf_li@exmple.com>
+Date:   Fri Aug 25 09:17:55 2023 +0800
+
+    adaptive uboot menu; adaptive iptables
+
+commit f8369fcab4352b3be4fb81db08be541316016206
+Author: elf_li <elf_li@exmple.com>
+Date:   Thu Jul 20 14:27:17 2023 +0800
+
+    Unified drive naming
+
+commit 37cdd72cf3015e0164d2a84a00471c89c9aab010
+Author: lnn <l13223144576@163.com>
+Date:   Sat Jun 17 16:22:13 2023 +0800
+
+    okmx6ull_s2_defconfig is renamed imx6ull_elf1_defconfig
+
+commit 89c57dc0b70d1314bdb8d784a17c05c27ed3c9a7
+Author: lnn <l13223144576@163.com>
+Date:   Tue Jun 13 15:38:05 2023 +0800
+
+    add nau88c22; del wm8960
+
+commit 712aa4d6bf508a82473eda76a77d8b8e7656d710
+Author: lnn <l13223144576@163.com>
+Date:   Fri Jun 9 11:27:55 2023 +0800
+
+    set lcd 480x272; update icm20607 driver
+
+commit b05d57c1b4df0754283ac8dbb0aac03430f0012a
+Author: lnn <l13223144576@163.com>
+Date:   Wed Jun 7 11:29:20 2023 +0800
+
+    add imx6ull-elf1-emmc.dts
+
+commit 60296f0b066d8e1e16b0c0da50721988b38f17e3
+Author: zhangpan <601897063@qq.com>
+Date:   Wed May 19 10:48:12 2021 +0800
+
+    support bluetooth
+
+commit fb3c16ec8ab1c87e3fd08060cf88245d604c6a44
+Author: zhangpan <601897063@qq.com>
+Date:   Mon May 10 16:11:21 2021 +0800
+
+    Delete the AX88772B driver of version v4.24.0 that was added later, and use the driver that comes with the linux kernel
+
+commit ca5372f6631aa5e9805075d186ae7cc508d638f8
+Author: zhangpan <601897063@qq.com>
+Date:   Mon May 10 14:36:54 2021 +0800
+
+    support usb2net ASIX 88772B
+
+commit 1021e8cea666eeda8fec7d14a93b56eff0d16ee6
+Author: zhangpan <601897063@qq.com>
+Date:   Fri Apr 23 16:43:29 2021 +0800
+
+    modify emmc pad strength
+
+commit 5d2df9d153d7e43cff102031b6a6aaca2c58308b
+Author: zhangpan <601897063@qq.com>
+Date:   Fri Apr 23 13:19:34 2021 +0800
+
+    support rtl8723du
+
+commit 2aee1dd2ba424e8d6870c78ea8017d1890d26839
+Author: zhangpan <601897063@qq.com>
+Date:   Wed Mar 17 09:37:10 2021 +0800
+
+    modify backlight pwm
+
+commit 38263c0328a28d45399dcb5de273cded8e55e044
+Author: zhangpan <601897063@qq.com>
+Date:   Fri Mar 12 17:02:39 2021 +0800
+
+    modify dts name
+
+commit 17cfebe99f02a6a28ee284bdaf59c41c50c3db23
+Author: zhangpan <601897063@qq.com>
+Date:   Thu Mar 11 14:15:43 2021 +0800
+
+    add ec20
+
+commit 076ba1b89de183498bc75a5a6f5b588a3556c459
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Mar 2 15:02:01 2021 +0800
+
+    modify build.sh
+
+commit 7325f1033f85479738c9be8ceab27cd9a554030e
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Mar 2 10:58:06 2021 +0800
+
+    modify mmc pins drive strength to make it consistent with irom
+
+commit 7ebaf4473b23391161a75efa22801f88e9dd46ed
+Author: zhangpan <601897063@qq.com>
+Date:   Mon Mar 1 14:41:57 2021 +0800
+
+    1. modify build.sh,add modules install; 2.modify defconfig,add UVC support;  3.modify backlight pwm freq
+
+commit c67b6a7fa471e8e8b943af311df3d32290032b84
+Author: zhangpan <601897063@qq.com>
+Date:   Wed Feb 24 08:42:24 2021 +0800
+
+    modify defconfig to add release version number
+
+commit b4b4c71de44dd5fcf856815256d294636723011e
+Author: zhangpan <601897063@qq.com>
+Date:   Mon Feb 22 14:16:34 2021 +0800
+
+    add support hdmi dts
+
+commit dd65b05302482126c5897a02c9848ab3db7261f1
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Feb 2 16:16:19 2021 +0800
+
+    fix lcd screen flickers, modify pwm freq at fdt file
+
+commit 4e588527acf46df35dd43184e89e2a7d055b8947
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Feb 2 09:35:27 2021 +0800
+
+    1. modify imx6ull-14x14-evk-gpmi-weim.dts   2.fix led iomux bug,modify fdt file 3. delete build2.sh  4. modify build.sh
+
+commit b2174866964d780763b541898f1c2e59289108e1
+Author: zhangpan <601897063@qq.com>
+Date:   Thu Jan 28 08:28:17 2021 +0800
+
+    1.add imx6ull-S2-gpmi-480x272.dts 2.add build2.sh
+
+commit a926132d2ee08b051e3044602756eb2253c42eed
+Author: zhangpan <601897063@qq.com>
+Date:   Sun Jan 24 12:51:12 2021 +0800
+
+    1 .modify okmx6ull_s2_defconfig 2. modify build.sh
+
+commit 9278d538e9c92f4d76e95b13480fecdff7dc5908
+Author: zhangpan <601897063@qq.com>
+Date:   Sat Jan 23 21:41:49 2021 +0800
+
+    support nand flash
+
+commit 7989de7da670a604cc9ea09689c9921c22bc1017
+Author: zhangpan <601897063@qq.com>
+Date:   Sat Jan 23 17:51:36 2021 +0800
+
+    1.add yaffs2 fs 2.nand dts
+
+commit a42aef934bcf0c6be5410ceabeffe7e7cb770a91
+Author: zhangpan <601897063@qq.com>
+Date:   Fri Jan 22 10:15:18 2021 +0800
+
+    add 4G me909s
+
+commit 62427fed3c4b710faf28717adfee847ac7116199
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Jan 19 16:23:51 2021 +0800
+
+    add 1024x600LCD
+
+commit cf1bdfdf93504da318f79631134526abb8b8a6ba
+Author: zhangpan <601897063@qq.com>
+Date:   Fri Jan 15 11:12:21 2021 +0800
+
+    1. modify aht20.c;  2. add okmx6ull_s2_defconfig
+
+commit 86638925ec82778f8152cf17739c6ced4e345a5b
+Author: zhangpan <601897063@qq.com>
+Date:   Thu Jan 7 10:46:28 2021 +0800
+
+    add LightSensor bh1726
+
+commit 1756b14d02799239dff4177538afe31d7bad4592
+Author: zhangpan <601897063@qq.com>
+Date:   Thu Dec 24 08:44:20 2020 +0800
+
+    add uarts
+
+commit 258f92c6484c3b77990c1200876c4d853fce484e
+Author: zhangpan <601897063@qq.com>
+Date:   Wed Dec 23 11:27:54 2020 +0800
+
+    add USB_MASS_STORAGE
+
+commit 543febb369271015e5c86f7a30a2603f89706ab6
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Dec 22 16:49:58 2020 +0800
+
+    1.add usb device 2.add realtek/rtl8723bu driver 3.modify gt9xx.c Makefile to fix date-time error
+
+commit 2174cd135fc02930b5ab9fdc68d9398f2f8d3588
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Dec 15 01:02:22 2020 -0800
+
+    add felxcan
+
+commit 59a529fd9a1d0efa71249d5a0682583448399811
+Author: zhangpan <601897063@qq.com>
+Date:   Sun Dec 13 22:35:41 2020 -0800
+
+    delete unuse file
+
+commit 82fb33accfacc04779d01f0aaf60bff806a2a142
+Author: zhangpan <601897063@qq.com>
+Date:   Sun Dec 13 22:31:52 2020 -0800
+
+    1:add adc num-channels; 2:modify ov9650.c to fit 320x240 mode
+
+commit f5cc011990d954c83d1aeba71c12bfabc5c7f2f7
+Author: zhangpang <601897063@qq.com>
+Date:   Tue Dec 8 06:55:32 2020 -0800
+
+    fix NXP bsp bug about pindunc.h
+
+commit d27612f5a70e0e8896cf6b4e0c6e7765c96b5202
+Author: zhangpan <601897063@qq.com>
+Date:   Mon Dec 7 17:24:04 2020 -0800
+
+    fix ov9650 no found bug
+
+commit c8b13ae224aa21d3a24f1d9ed459d584b6cec587
+Author: zhangpan <601897063@qq.com>
+Date:   Mon Dec 7 07:24:26 2020 -0800
+
+    add spi-gpios 74x164
+
+commit 5f598a682bea9daa23e5e846fdcba7e80a444410
+Author: zhangpan <601897063@qq.com>
+Date:   Mon Dec 7 01:31:05 2020 -0800
+
+    add ov9650
+
+commit 7792901d18345192a6902b3108e5f547c69dc7d7
+Author: zhangpan <601897063@qq.com>
+Date:   Sun Dec 6 22:35:42 2020 -0800
+
+    add ov9650 faild
+
+commit 48f7be4fe5895cded38b96152e41cb45aa9e9af9
+Author: zhangpan <601897063@qq.com>
+Date:   Thu Dec 3 23:40:17 2020 -0800
+
+    1. add ad and adc;  2. add imx6ull_s2_defconfig
+
+commit b4de85cc3f8d0679d99b88ac49b9c9d961536737
+Author: zhangpan <601897063@qq.com>
+Date:   Wed Dec 2 22:10:38 2020 -0800
+
+    add audio
+
+commit da6b694dda87a90129965116852bb74984cb6ad4
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Dec 1 23:46:58 2020 -0800
+
+    1.modify iomux about gpio5 pins;  2.add resistive touch and capacitive touch about gt9xx and ft5x06
+
+commit 8a43f9b83b6095b56f4c601d6d8e5cdc73d08dfb
+Author: =zhangpan <601897063@qq.com>
+Date:   Mon Nov 30 18:18:47 2020 -0800
+
+    add 480x272LCD and 800x480LCD
+
+commit 96c84b2a0ec7cc8a2fb91ac021f3e3a4a4db04e0
+Author: =zhangpan <601897063@qq.com>
+Date:   Sun Nov 29 18:34:21 2020 -0800
+
+    add icm20607.h
+
+commit 8a3ca70930a29bf770209e211b6c8e85bdc86615
+Author: =zhangpan <601897063@qq.com>
+Date:   Sun Nov 29 17:36:01 2020 -0800
+
+    add aht20
+
+commit b81aa3f9138c4f1b77010150ff2c1da67530daed
+Author: =zhangpan <601897063@qq.com>
+Date:   Thu Nov 26 23:52:50 2020 -0800
+
+    add driver spi_dev and icm20607
+
+commit fcf1520b5a343d361abb2e8d7c63ff07f66b401d
+Author: =zhangpan <601897063@qq.com>
+Date:   Thu Nov 26 23:44:57 2020 -0800
+
+    add spi and i2cdev_aht20_test
+
+commit 1a1de23fc4faa9451f9f6ffdd191f4043b7ae12a
+Author: =zhangpan <601897063@qq.com>
+Date:   Sun Nov 22 23:41:09 2020 -0800
+
+    add pwm2 function
+
+commit 1254c49ca1647a3e65f5d6cc27e8439e3cf16465
+Author: =zhangpan <601897063@qq.com>
+Date:   Tue Nov 17 18:30:15 2020 -0800
+
+    add iomux for led and key
+
+commit a1819eacc3c002960cd20d147654452d2fd9a8fe
+Author: zhangpan <601897063@qq.com>
+Date:   Tue Nov 10 00:40:36 2020 -0800
+
+    add keys
+
+commit d19a64c177833f3681a7e8ce49581debec905941
+Author: zhangpan <601897063@qq.com>
+Date:   Mon Nov 9 22:33:18 2020 -0800
+
+    add leds
+
+commit c3a976c6798c065d7b50d246f1f2216d1c100c0d
+Author: zhangpan <601897063@qq.com>
+Date:   Fri Nov 6 19:00:54 2020 -0800
+
+    NXP linux first version
