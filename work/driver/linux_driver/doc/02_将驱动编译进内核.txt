@@ -1,0 +1,47 @@
+1、在 driver/char 下面新建 helloworld 文件夹
+2、在 helloworld 文件夹下创建 Makefile、Kconfig、hello_world.c 文件
+
+文件内容如下：
+==================================================
+Makefile:
+    obj-$(CONFIG_HELLOWORLD)	+= hello_world.o
+
+CONFIG_HELLOWORLD 变量是在 Kconfig 文件中使用 “config HELLOWORLD” 来表示
+
+======================================================
+Kconfig:
+    config HELLOWORLD
+        bool "hello world support"
+        default y
+        help
+            hello world
+
+==============================================================
+hello_world.c:
+    #include <linux/init.h>
+    #include <linux/module.h>
+
+    static int __init hello_init(void)
+    {
+        printk(KERN_INFO " ### Hello World Enter!!! ###\n");
+        return 0;
+    }
+
+    static void __exit hello_exit(void)
+    {
+        printk(KERN_INFO "### Hello World Exit ###\n");
+    }
+
+    module_init(hello_init);
+    module_exit(hello_exit);
+    
+    MODULE_LICENSE("GPL");
+=========================================================================
+
+还需要修改上级目录，如下：
+
+drivers/char/Kconfig:
+    source "drivers/char/helloworld/Kconfig"
+=========================================================================
+drivers/char/Makefile:
+    obj-$(CONFIG_HELLOWORLD)		+= helloworld/

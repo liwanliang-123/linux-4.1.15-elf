@@ -1,0 +1,32 @@
+Kconfig/.config/Makefile 三个文件的关系
+
+用做菜来类比三者之间的关系：
+    Makefile: 相当于菜的具体做法
+    Kconfig: 相当于饭店的菜单
+    .config: 相当于从菜单上面点完的菜
+
+（而 config 文件就是不同饭店的菜单，Kconfig 就是选择一家饭店的菜单进行点菜）
+
+
+Kconfig：图形化配置的源文件，图形化配置中的选项由 Kconfig 文件决定
+当执行 make menuconfig 命令时，内核会读取内核源码目录下的 arch/xxx/Kconfig,
+其中 xxx 是由 ARCH=arm 决定。
+
+
+config和.config 文件：
+    两个文件都是 linux 内核配置文件，config文件位于linux源码的 arch/arm/configs 目录下，是 linux 系统默认的配置文件
+    .config 文件位于 linux 内核源码的顶层目录下，编译 linux 时会使用 .config 中的配置文件来编译 linux 系统镜像。
+
+    如果 .config 存在，make menuconfig 界面的默认配置即当前 .config 文件的配置，如果修改并保存了配置，则 .config 文件会更新。
+
+    如果 .config 文件不存在，make menuconfig 界面的默认配置则为 Kconfig 文件中的默认配置。
+
+    使用命令 make xxx_defconfig 命令会根据 arch/arm/config 目录下默认文件生成 .config 文件。
+
+
+总结： 
+    当需要编译一个 linux 镜像时，需要根据 .config 配置文件中的配置来编译，
+    那这个 .config 文件可以通过 make xxx_defconfig 命令来生成 .config 文件
+    当确定好 .config 文件之后可以通过 make menuconfig 来进行选择自己需要编译的驱动模块
+    而 make menuconfig 图形化配置中的选项由 Kconfig 文件决定
+    Makefile 文件则是通过最终生成的 .config 配置文件来进行编译 linux 镜像。

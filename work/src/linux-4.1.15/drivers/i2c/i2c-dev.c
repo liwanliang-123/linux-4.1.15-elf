@@ -139,6 +139,7 @@ static ssize_t i2cdev_read(struct file *file, char __user *buf, size_t count,
 	char *tmp;
 	int ret;
 
+//  file->private_data 变量在 open 函数中设置
 	struct i2c_client *client = file->private_data;
 
 	if (count > 8192)

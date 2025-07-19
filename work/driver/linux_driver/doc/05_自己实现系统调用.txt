@@ -1,0 +1,52 @@
+驱动代码修改（驱动需要编译进内核）
+======================================================================================
+diff --git a/srcs/linux-5.4.239/include/uapi/asm-generic/unistd.h b/srcs/linux-5.4.239/include/uapi/asm-generic/unistd.h
+index 1fc8faa6e..5a314dd40 100644
+--- a/srcs/linux-5.4.239/include/uapi/asm-generic/unistd.h
++++ b/srcs/linux-5.4.239/include/uapi/asm-generic/unistd.h
+@@ -851,8 +851,11 @@ __SYSCALL(__NR_pidfd_open, sys_pidfd_open)
+ __SYSCALL(__NR_clone3, sys_clone3)
+ #endif
+ 
++#define __NR_helloworld 436
++__SYSCALL(__NR_helloworld, sys_helloworld)
++
+ #undef __NR_syscalls
+-#define __NR_syscalls 436
++#define __NR_syscalls 437
+ 
+ /*
+  * 32 bit systems traditionally used different
+
+========================================================================================
+syscall_helloworld.c  驱动代码
+
+#include <linux/kernel.h>
+#include <linux/syscalls.h>
+
+//需要将该 driver 编译进内核
+
+//没有参数的系统调用
+SYSCALL_DEFINE0(helloworld)
+{
+    printk("printf\n");
+    return 0;
+}
+
+===========================================================================================
+hello.c  用户空间代码
+
+#include <unistd.h>
+#include <sys/syscall.h>
+
+#define __NR_helloworld 436
+
+# define helloworld() syscall(__NR_helloworld)
+
+int main()
+{
+	helloworld();
+	return 0;
+}
+===============================================================
+

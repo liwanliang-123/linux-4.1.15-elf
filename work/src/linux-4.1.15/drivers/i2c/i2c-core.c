@@ -640,6 +640,9 @@ static int i2c_device_probe(struct device *dev)
 		if (irq < 0)
 			irq = 0;
 
+//  在执行 i2c_driver 下的 probe 函数时会先执行 bus 下面的 probe
+//  在这里会处理设备树中和中断相关的属性，比如 irq
+//  并将 irq 给到 client->irq
 		client->irq = irq;
 	}
 
@@ -658,6 +661,7 @@ static int i2c_device_probe(struct device *dev)
 
 	status = dev_pm_domain_attach(&client->dev, true);
 	if (status != -EPROBE_DEFER) {
+//  调用驱动中的 probe 函数
 		status = driver->probe(client, i2c_match_id(driver->id_table,
 					client));
 		if (status)
@@ -1291,6 +1295,7 @@ static struct i2c_client *of_i2c_register_device(struct i2c_adapter *adap,
 	if (of_get_property(node, "wakeup-source", NULL))
 		info.flags |= I2C_CLIENT_WAKE;
 
+//  最后调用 i2c_new_device 函数初始化一个 i2c_client 结构
 	result = i2c_new_device(adap, &info);
 	if (result == NULL) {
 		dev_err(&adap->dev, "of_i2c: Failure registering %s\n",
@@ -1306,6 +1311,7 @@ static void of_i2c_register_devices(struct i2c_adapter *adap)
 	struct device_node *node;
 
 	/* Only register child devices if the adapter has a node pointer set */
+//  先判断有没有 i2c 控制器节点，因为马上要处理 i2c 控制器下面的子节点
 	if (!adap->dev.of_node)
 		return;
 
@@ -1407,7 +1413,7 @@ static int i2c_register_adapter(struct i2c_adapter *adap)
 	dev_set_name(&adap->dev, "i2c-%d", adap->nr);
 	adap->dev.bus = &i2c_bus_type;
 	adap->dev.type = &i2c_adapter_type;
-	res = device_register(&adap->dev);
+	res = device_register(&adap->dev);  // 注册 i2c 控制器的设备
 	if (res)
 		goto out_list;
 
@@ -1518,6 +1524,7 @@ int i2c_add_adapter(struct i2c_adapter *adapter)
 	struct device *dev = &adapter->dev;
 	int id;
 
+//  如果有设备节点则会走这个分支，id表示第几个 i2c 控制器
 	if (dev->of_node) {
 		id = of_alias_get_id(dev->of_node, "i2c");
 		if (id >= 0) {
@@ -1526,6 +1533,7 @@ int i2c_add_adapter(struct i2c_adapter *adapter)
 		}
 	}
 
+//  如果没有使用设备树，而使用i2c_scan_static_board_info则会走到这里
 	mutex_lock(&core_lock);
 	id = idr_alloc(&i2c_adapter_idr, adapter,
 		       __i2c_first_dynamic_bus_num, 0, GFP_KERNEL);
