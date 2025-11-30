@@ -9,6 +9,8 @@
 set -e
 
 make ARCH=arm CROSS_COMPILE=arm-poky-linux-gnueabi- imx6ull-elf1-emmc.dtb
+scp -oHostKeyAlgorithms=+ssh-rsa ./arch/arm/boot/dts/imx6ull-elf1-emmc.dtb root@192.168.1.161:/run/media/mmcblk1p1
+
+
 #scp -oHostKeyAlgorithms=+ssh-rsa ./arch/arm/boot/dts/imx6ull-elf1-emmc.dtb root@192.168.1.161:/run/media/mmcblk1p1
-scp -oHostKeyAlgorithms=+ssh-rsa ./arch/arm/boot/dts/imx6ull-elf1-emmc.dtb root@192.168.1.55:/run/media/mmcblk1p1
 #scp ./arch/arm/boot/dts/imx6ull-elf1-emmc.dtb root@192.168.1.55:/run/media/mmcblk1p1

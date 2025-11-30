@@ -61,7 +61,7 @@
 			linux,default-trigger = "heartbeat";
 		};
 	};
-
+/*
 	gpio-keys {
 		compatible = "gpio-keys";
 		pinctrl-names = "default";
@@ -85,6 +85,7 @@
 		gpios = <&gpio5 9 GPIO_ACTIVE_LOW>;
 		};
 	};
+*/
 	backlight {
 		compatible = "pwm-backlight";
 		pwms = <&pwm1 0 50000>;
@@ -877,7 +878,7 @@
 				MX6ULL_PAD_SNVS_TAMPER5__GPIO5_IO05	0x10b0
 			>;
 		};
-
+/*
 		pinctrl_keys: keysgrp {
 			fsl,pins = <
 				MX6ULL_PAD_SNVS_TAMPER4__GPIO5_IO04	0x80000000
@@ -885,7 +886,7 @@
 				MX6ULL_PAD_SNVS_TAMPER9__GPIO5_IO09	0x80000000
 			>;
 		};
-
+*/
 		pinctrl_tsc_ic: tsc_icgrp {
 			fsl,pins = <
 				MX6ULL_PAD_SNVS_TAMPER0__GPIO5_IO00	0x10b0
